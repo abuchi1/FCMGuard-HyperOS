@@ -23,11 +23,6 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Install Android SDK packages
-        run: |
-          yes | sdkmanager --licenses
-          sdkmanager "platforms;android-35" "build-tools;35.0.0"
-
       - name: Restore stable CI signing key
         uses: actions/cache@v4
         with:
